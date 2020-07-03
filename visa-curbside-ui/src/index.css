@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@font-face {
+  font-family: 'Avenir-Roman';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Avenir-Roman'), url(./fonts/AvenirLTStd-Roman.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Avenir-Book';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Avenir-Book'), url(./fonts/AvenirLTStd-Book.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Avenir-Black';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Avenir-Black'), url(./fonts/AvenirLTStd-Black.otf) format('opentype');
+}

@@ -1,0 +1,51 @@
+.login {
+  background-color: gray;
+  border-radius: 10px;
+  color: white;
+  font-family: "Avenir-Roman";
+  width: 400px;
+  padding: 20px;
+  display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+
+.heading{
+  font-family: "Avenir-Black";
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.submit-button {
+  padding: 5px;
+  border-radius: 100px;
+  width: 150px;
+  color: white;
+  font-weight: bold;
+  height: 25px;
+  line-height: 25px;
+  background-color: rgb(247, 182, 0);
+  cursor: pointer;
+  text-align: center;
+}
+
+.credential-field {
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border-style: none;
+  height: 30px;
+  padding-left: 5px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 60px)
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+
+}

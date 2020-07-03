@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visa Checkout</title>
+    <script type="text/javascript">
+        function onVisaCheckoutReady() {
+            V.init( {
+                apikey: "6S6KT1L6ZU7W2N4MXNJR21TaAu4TcLavxXJZld3pZi6NICiFY",
+                encryptionKey: "2BBIAJwWDWG/ecI0M6ecYKXgylDupOF5H8GfgwOW",
+                paymentRequest: {
+                    currencyCode: "USD",
+                    subtotal: "10.00"
+                }
+            });
+            V.on("payment.success", function(payment) {
+                let time = (new URLSearchParams(window.location.search)).get('time')
+
+                fetch("https://visa-curbside-fastapi.herokuapp.com/submitOrder", {
+                    method: 'POST',
+                    headers: {
+                        "Authorization": "Bearer " + window.localStorage.getItem('token')
+                    },
+                    body: JSON.stringify({
+                        "time": time
+                    })
+                })
+                .then(resp => {
+                    parent.redirectOrderStatus();
+                })
+                .catch(err => {
+                    alert("Sorry, something went wrong. Your order wasn't processed. Please try again later. Thank you.")
+                })
+
+                
+            });
+            V.on("payment.cancel", function(payment) {
+                let time = (new URLSearchParams(window.location.search)).get('time')
+
+                fetch("https://visa-curbside-fastapi.herokuapp.com/submitOrder", {
+                    method: 'POST',
+                    headers: {
+                        "Authorization": "Bearer " + window.localStorage.getItem('token')
+                    },
+                    body: JSON.stringify({
+                        "time": time
+                    })
+                })
+                .then(resp => {
+                    parent.redirectOrderStatus();
+                })
+                .catch(err => {
+                    console.log(err)
+                    alert("Sorry, something went wrong. Your order wasn't processed. Please try again later. Thank you.")
+                })
+            });
+            V.on("payment.error", function(payment, error) {
+                alert("payment.error: \n" +
+                JSON.stringify(payment) + "\n" +
+                JSON.stringify(error));
+            });
+        }
+    </script>
+</head>
+<body style="display: flex; justify-content: center; align-content: center; align-items: center;">
+    <img alt="Visa Checkout" class="v-button" role="button" style="align-self: center; vertical-align: middle;"
+    src="https://sandbox.secure.checkout.visa.com/wallet-services-web/xo/button.png"/>
+    <script type="text/javascript" 
+        src="https://sandbox-assets.secure.checkout.visa.com/checkout-widget/resources/js/integration/v1/sdk.js">
+</script>
+</body>
+</html>

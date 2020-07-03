@@ -1,0 +1,13 @@
+.parking-info {
+  font-family: "Avenir-Roman";
+  background-color: gray;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}

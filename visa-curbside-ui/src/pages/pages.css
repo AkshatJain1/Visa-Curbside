@@ -1,0 +1,29 @@
+.header{
+  background-color: rgb(25,32,97);
+  height: 40px;
+  width: calc(100% - 20px);
+  padding: 10px;
+  color: white;
+  border-radius: 0px 0px 10px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-img {
+  height: 100%;
+}
+
+.header-search{
+  border-width: 0px;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: none;
+  width: 300px;
+  padding-left: 10px;
+}
+
+ /* removes border from search when selected */
+input[type=text] {
+  outline: 0;
+}
+

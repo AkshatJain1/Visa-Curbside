@@ -1,0 +1,121 @@
+.review {
+    text-align: center;
+    font-family: "Avenir-Roman";
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+.cart-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40;
+    border-width: 1px;
+    border-style: solid;
+    width: 500px;
+    border-radius: 10px;
+    border-color: rgb(201, 201, 201);
+}
+
+.cart-heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 500px;
+    font-family: "Avenir-Black";
+    margin-top: 25px;
+    font-size: 30px;
+}
+
+.checkout {
+    font-family: "Avenir-Roman";
+    background-color: grey;
+    color: white;
+    width: 300px;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    margin-top: 25px;
+}
+
+.submit-button {
+    padding: 5px;
+    border-radius: 100px;
+    width: 150px;
+    color: white;
+    font-weight: bold;
+    height: 25px;
+    line-height: 25px;
+    background-color: rgb(247, 182, 0);
+    cursor: pointer;
+    text-align: center;
+}
+
+.checkout-field {
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border-style: none;
+    height: 30px;
+    padding-left: 5px;
+}
+
+.checkout-heading {
+    font-family: "Avenir-Black";
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.short-field {
+    width: 46.5%;
+}
+
+.checkout-div {
+    display: flex;
+    justify-content: center;
+}
+
+.time-select {
+    font-family: "Avenir-Roman";
+    text-align: center;
+    width: 500px; 
+    height: calc(100vh - 110px);
+    overflow: auto;
+    padding: 25px;
+}
+
+.time {
+    border-color: rgb(187, 187, 187);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 5px;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
