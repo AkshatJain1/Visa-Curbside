@@ -2,7 +2,7 @@ pytz==2019.3
 Werkzeug==0.16.0
 numpy==1.18.0
 pandas==0.25.3
-fastapi==0.58.1
+fastapi==0.65.2
 PyJWT==1.7.1
 turicreate==6.3
 users==1.0.dev0
