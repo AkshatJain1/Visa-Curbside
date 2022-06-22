@@ -1,6 +1,6 @@
 pytz==2019.3
 Werkzeug==0.16.0
-numpy==1.18.0
+numpy==1.22.0
 pandas==0.25.3
 fastapi==0.58.1
 PyJWT==1.7.1
